@@ -1,2 +1,19 @@
-# register-driver-agent
-**Register Driver Agent** - 一个基于 AI 长链推理的嵌入式驱动代码自动生成工具  从芯片厂商提供的 SVD/Excel 寄存器描述文件，自动生成生产级外设驱动代码（寄存器定义、位域宏、读写函数、初始化模板），附带自我验证能力。  ✅ 5步长链推理：解析 → 生成宏 → 生成函数 → 生成初始化 → 自我验证 ✅ 驱动开发时间缩短 90%（16小时 → 1.5小时） ✅ 寄存器位域错误率从 15% 降至 &lt;1% ✅ Token 消耗：约 11,000 / 次  **适用外设**：SPI、UART、I2C、GPIO、TIM、DMA 等  **目标用户**：嵌入式驱动开发工程师、芯片厂商 SDK 维护者
+# Register Driver Agent
+
+> AI-powered embedded driver code generator from register description files
+
+## 📌 Overview
+
+This project demonstrates an **AI Agent** that automatically generates embedded peripheral drivers (register definitions, access functions, initialization templates) from SVD/Excel register description files.
+
+**Core capability**: Input a register description → Output production-ready C driver code.
+
+## 🎯 Problem Solved
+
+| Pain Point | Before | After |
+|------------|--------|-------|
+| Driver development time | 16 hours/peripheral | 1.5 hours |
+| Bitfield/offset error rate | ~15% | <1% |
+| Cross-chip migration effort | Full rewrite | <20% modification |
+
+## 🏗️ Architecture

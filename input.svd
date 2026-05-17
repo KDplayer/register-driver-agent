@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<device schemaVersion="1.3">
+  <peripherals>
+    <peripheral>
+      <name>SPI1</name>
+      <description>Serial Peripheral Interface 1</description>
+      <baseAddress>0x40013000</baseAddress>
+      
+      <registers>
+        <register>
+          <name>CR1</name>
+          <description>Control Register 1</description>
+          <addressOffset>0x00</addressOffset>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>BR</name>
+              <description>Baud Rate Control</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>3</bitWidth>
+            </field>
+            <field>
+              <name>SPE</name>
+              <description>SPI Enable</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>MSTR</name>
+              <description>Master Selection</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CPOL</name>
+              <description>Clock Polarity</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>CPHA</name>
+              <description>Clock Phase</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        
+        <register>
+          <name>SR</name>
+          <description>Status Register</description>
+          <addressOffset>0x08</addressOffset>
+          <resetValue>0x00000002</resetValue>
+          <fields>
+            <field>
+              <name>TXE</name>
+              <description>Transmit Buffer Empty</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RXNE</name>
+              <description>Receive Buffer Not Empty</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        
+        <register>
+          <name>DR</name>
+          <description>Data Register</description>
+          <addressOffset>0x0C</addressOffset>
+          <resetValue>0x00000000</resetValue>
+        </register>
+      </registers>
+    </peripheral>
+  </peripherals>
+</device>
